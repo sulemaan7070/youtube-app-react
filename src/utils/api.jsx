@@ -11,9 +11,20 @@ const options = {
     "X-RapidAPI-Host": "youtube138.p.rapidapi.com",
   },
 };
+const optionsForSearch = {
+  params: { hl: "en", gl: "IN" },
+  headers: {
+    "X-RapidAPI-Key": import.meta.env.VITE_SOME_KEY || "your api key",
+    "X-RapidAPI-Host": "youtube138.p.rapidapi.com",
+  },
+};
 
 export const fetchDataFromApi = async (url) => {
   const { data } = await axios.get(`${BASE_URL}/${url}`, options);
+  return data;
+};
+export const fetchSearchDataFromApi = async (url) => {
+  const { data } = await axios.get(`${BASE_URL}/${url}`, optionsForSearch);
   return data;
 };
 
