@@ -27,5 +27,3 @@ export const fetchSearchDataFromApi = async (url) => {
   const { data } = await axios.get(`${BASE_URL}/${url}`, optionsForSearch);
   return data;
 };
-
-console.log(import.meta.env.VITE_SOME_KEY);
