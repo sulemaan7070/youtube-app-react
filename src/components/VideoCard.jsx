@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { Context } from "../context/contextApi";
 import { abbreviateNumber } from "js-abbreviation-number";
 import { Link } from "react-router-dom";
@@ -12,8 +12,6 @@ import VideoLength from "../shared/videoLength";
 const VideoCard = ({ video }) => {
   const { loadSkeleton, setLoadSkeleton } = useContext(Context);
   //conditionally rendering a skeleton loader
-
-  useEffect(() => {}, []);
   return (
     <Link to={`/video/${video?.videoId}`}>
       <div className="flex flex-col mb-8">

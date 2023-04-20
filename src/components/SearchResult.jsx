@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
-
-import { fetchDataFromApi } from "../utils/api";
 import { fetchSearchDataFromApi } from "../utils/api";
 import { Context } from "../context/contextApi";
 import LeftNav from "./LeftNav";
